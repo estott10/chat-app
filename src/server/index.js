@@ -5,6 +5,7 @@ const express = require('express'),
       cors = require('cors'),
       massive = require('massive');
 
+const userController = require('./user_controller')
 
 const app = express();
 
@@ -15,6 +16,9 @@ massive(process.env.CONNECTION_STRING).then(dbInstance => {
     app.set('db', dbInstance);
     }).catch( err => console.log(err) );
 
+// const {addUser} = userController;
+
+app.post('/api/register', userController.addUser)
 
 const port = process.env.PORT;
 

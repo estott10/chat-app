@@ -9,7 +9,6 @@ export default class Nav extends Component{
                 <button><Link to='/dashboard'>Home</Link></button>
                 <button><Link to='/new'>New Post</Link></button>
                 <button><Link to='/'>Logout</Link></button>
-
             </div>
         )
     }
